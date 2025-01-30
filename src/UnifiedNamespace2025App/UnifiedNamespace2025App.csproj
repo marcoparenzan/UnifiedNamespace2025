@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Data\data_acme_2020_07_007955_0x40_a.csv" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Data\data_acme_2020_07_007955_0x40_a.csv">
+		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+		<Content Include="virtualSignals.yaml">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BlazorMonaco" Version="3.3.0" />
+		<PackageReference Include="MudBlazor" Version="7.*" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\UnifiedNamespace2025Lib\UnifiedNamespace2025Lib.csproj" />
+		<ProjectReference Include="..\HmiLib\HmiLib.csproj" />
+	</ItemGroup>
+
+
+</Project>

@@ -1,0 +1,2 @@
+﻿sensors/filesensor/status: =  If('sensors/filesensor/temperature'.Value>'sensors/filesensor/config'.setpoint;'sensors/filesensor/config'.goodmessage;'sensors/filesensor/config'.badmessage)
+XXsensors/filesensor/status: =  If('sensors/filesensor/temperature'.Value>-18;"Good";"Bad")
